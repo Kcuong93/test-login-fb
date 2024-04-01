@@ -13,11 +13,6 @@
 	</fb:login-button>
 <script>
 	
-	function checkLoginState() {
-	FB.getLoginStatus(function(response) {
-		statusChangeCallback(response);
-	});
-	}
 	window.fbAsyncInit = function() {
 		FB.init({
 			appId      : '3948960068721135',
@@ -31,6 +26,11 @@
 		FB.getLoginStatus(function(response) {
 			statusChangeCallback(response);
 		});
+		function checkLoginState() {
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+			});
+		}
 	};
   
 	(function(d, s, id){
